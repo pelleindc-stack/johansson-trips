@@ -1,90 +1,174 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0f6d7a">
-<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="styles.css">
-<title>Maui Trip Aug 2026</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#075d68">
+  <meta name="description" content="Offline-first Maui itinerary for August 1–5, 2026.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Maui Trip">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Maui Trip · Aug 2026</title>
 </head>
 <body>
-<header><h1>Maui Trip — Aug 1–5, 2026</h1><p>Offline itinerary, parking, hikes and one-tap Apple Maps links</p></header>
-<main>
-<nav class="tabs">
-<button class="active" data-tab="today">Sunday</button>
-<button data-tab="maps">Maps</button>
-<button data-tab="hikes">Hikes</button>
-<button data-tab="trip">Trip</button>
-</nav>
+  <a class="skip-link" href="#main">Skip to itinerary</a>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Aug 1–5, 2026</p>
+      <h1>Maui Trip</h1>
+    </div>
+    <div class="connection" id="connection-status" role="status" aria-live="polite">
+      <span class="connection-dot" aria-hidden="true"></span>
+      <span id="connection-label">Checking…</span>
+    </div>
+  </header>
 
-<section id="today" class="panel active">
-<div class="card hero">
-<span class="badge">Sunday, Aug 2</span>
-<h2>Active Northwest Maui Day</h2>
-<p class="sub">Leave 8:30 AM · Return 4:30–5:00 PM · Sale Pepe 6:45 PM</p>
-<div class="route"><span class="stop">Westin</span><span class="arrow">→</span><span class="stop">Kapalua</span><span class="arrow">→</span><span class="stop">Honolua</span><span class="arrow">→</span><span class="stop">Nakalele</span><span class="arrow">→</span><span class="stop">Westin</span></div>
-<a class="btn" href="https://maps.apple.com/?ll=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking">Navigate to first stop</a>
-</div>
+  <main id="main">
+    <nav class="tabs" aria-label="Trip sections">
+      <button class="active" type="button" data-tab="today" aria-controls="today" aria-selected="true">
+        <span aria-hidden="true">☀︎</span><span>Sunday</span>
+      </button>
+      <button type="button" data-tab="maps" aria-controls="maps" aria-selected="false">
+        <span aria-hidden="true">⌖</span><span>Maps</span>
+      </button>
+      <button type="button" data-tab="hikes" aria-controls="hikes" aria-selected="false">
+        <span aria-hidden="true">△</span><span>Hikes</span>
+      </button>
+      <button type="button" data-tab="trip" aria-controls="trip" aria-selected="false">
+        <span aria-hidden="true">•••</span><span>Trip</span>
+      </button>
+    </nav>
 
-<div class="card warning"><strong>Important:</strong> Turn around at Nakalele and return the same way. Do not continue around the remote north side.</div>
+    <section id="today" class="panel active" aria-labelledby="today-heading">
+      <div class="hero card">
+        <span class="badge">Sunday, Aug 2</span>
+        <h2 id="today-heading">Active Northwest Maui Day</h2>
+        <p class="hero-summary">Leave 8:30 AM · Return 4:30–5:00 PM · Sale Pepe 6:45 PM</p>
+        <div class="route" aria-label="Route: Westin to Kapalua to Honolua to Nakalele and back to Westin">
+          <span>Westin</span><i>→</i><span>Kapalua</span><i>→</i><span>Honolua</span><i>→</i><span>Nakalele</span><i>→</i><span>Westin</span>
+        </div>
+      </div>
 
-<div class="card"><h3>Quick schedule</h3>
-<ul class="timeline">
-<li><div class="time">8:30</div><div><strong>Leave Westin</strong><br><span class="sub">Drive north on HI-30.</span></div></li>
-<li><div class="time">8:50</div><div><strong>Kapalua Bay</strong><br><span class="sub">Beach and trail start.</span></div></li>
-<li><div class="time">9:00</div><div><strong>Coastal Trail</strong><br><span class="sub">Walk toward Oneloa and Dragon's Teeth.</span></div></li>
-<li><div class="time">10:45</div><div><strong>Dragon's Teeth</strong><br><span class="sub">30–45 minute side walk.</span></div></li>
-<li><div class="time">11:30</div><div><strong>D.T. Fleming</strong><br><span class="sub">Short beach/restroom stop.</span></div></li>
-<li><div class="time">12:00</div><div><strong>Honolua Bay</strong><br><span class="sub">Lookout or short forest walk.</span></div></li>
-<li><div class="time">12:45</div><div><strong>Honolua Store</strong><br><span class="sub">Quick lunch.</span></div></li>
-<li><div class="time">1:45</div><div><strong>Nakalele Blowhole</strong><br><span class="sub">Stay well back on dry rock.</span></div></li>
-<li><div class="time">3:15</div><div><strong>Return to Westin</strong></div></li>
-<li><div class="time">6:45</div><div><strong>Sale Pepe</strong><br><span class="sub">2 guests · bar seats · 808-667-7667</span></div></li>
-</ul></div>
+      <article class="next-stop card" aria-labelledby="next-stop-heading">
+        <div class="next-stop-topline">
+          <p class="eyebrow">Next stop <span id="stop-progress">1 of 8</span></p>
+          <button class="text-button" id="reset-route" type="button">Start over</button>
+        </div>
+        <h2 id="next-stop-heading" tabindex="-1">Kapalua Bay Parking</h2>
+        <p class="next-time" id="next-stop-time">Arrive 8:50 AM</p>
+        <p id="next-stop-note">Beach and trail start.</p>
+        <a class="button primary maps-button" id="next-stop-map" href="https://maps.apple.com/?daddr=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking&dirflg=d">Get directions in Apple Maps</a>
+        <div class="stop-controls">
+          <button class="button ghost" id="previous-stop" type="button" disabled>Previous</button>
+          <button class="button secondary" id="complete-stop" type="button">Mark visited →</button>
+        </div>
+      </article>
 
-<div class="card"><h3>Before leaving</h3>
-<label class="checkrow"><input type="checkbox"><span>Download West Maui offline map in Apple Maps</span></label><label class="checkrow"><input type="checkbox"><span>Fully charge both phones</span></label><label class="checkrow"><input type="checkbox"><span>Water and snacks</span></label><label class="checkrow"><input type="checkbox"><span>Walking shoes with grip</span></label><label class="checkrow"><input type="checkbox"><span>Swimsuits and towels</span></label><label class="checkrow"><input type="checkbox"><span>Hats and reef-safe sunscreen</span></label><label class="checkrow"><input type="checkbox"><span>Light rain layer</span></label><label class="checkrow"><input type="checkbox"><span>At least half a tank of gas</span></label><label class="checkrow"><input type="checkbox"><span>Keep valuables out of sight</span></label>
-</div>
-</section>
+      <aside class="notice warning" role="note">
+        <strong>Turn around at Nakalele.</strong>
+        <span>Return the same way. Do not continue around the remote north side.</span>
+      </aside>
 
-<section id="maps" class="panel">
-<div class="card"><h2>Tap the next stop</h2><p class="sub">Use individual legs instead of one giant route. It is easier when parking is full or you skip a stop.</p><div class="place"><div><strong>1. Kapalua Bay Parking</strong></div><a href="https://maps.apple.com/?ll=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking">Open Maps</a></div>
-<div class="place"><div><strong>2. Dragon's Teeth Parking</strong></div><a href="https://maps.apple.com/?q=Dragon%27s+Teeth+Parking,+Kapalua,+HI">Open Maps</a></div>
-<div class="place"><div><strong>3. D.T. Fleming Beach</strong></div><a href="https://maps.apple.com/?q=D.T.+Fleming+Beach+Park,+Maui,+HI">Open Maps</a></div>
-<div class="place"><div><strong>4. Honolua Bay Lookout</strong></div><a href="https://maps.apple.com/?q=Honolua+Bay+Lookout,+Maui,+HI">Open Maps</a></div>
-<div class="place"><div><strong>5. Honolua Store</strong></div><a href="https://maps.apple.com/?q=Honolua+Store,+Kapalua,+HI">Open Maps</a></div>
-<div class="place"><div><strong>6. Nakalele Parking</strong></div><a href="https://maps.apple.com/?ll=21.024424,-156.590498&q=Nakalele%20Blowhole%20Parking">Open Maps</a></div>
-<div class="place"><div><strong>7. Return to Westin</strong></div><a href="https://maps.apple.com/?saddr=21.024424,-156.590498&daddr=The+Westin+Kaanapali+Ocean+Resort+Villas,+6+Kai+Ala+Drive,+Lahaina,+HI&dirflg=d">Open Maps</a></div>
-<div class="place"><div><strong>8. Sale Pepe</strong></div><a href="https://maps.apple.com/?q=Sale+Pepe,+157+Kupuohi+Street,+Lahaina,+HI">Open Maps</a></div></div>
-<div class="card"><img class="map" src="route-map.png" alt="Northwest Maui route map"></div>
-</section>
+      <div class="card">
+        <div class="section-heading">
+          <div><p class="eyebrow">At a glance</p><h2>Quick schedule</h2></div>
+          <span class="small">Tap a stop to make it next</span>
+        </div>
+        <ol class="timeline" id="timeline">
+          <li data-stop-index="0"><button type="button"><time>8:50</time><span><strong>Kapalua Bay</strong><small>Beach and trail start.</small></span></button></li>
+          <li data-stop-index="1"><button type="button"><time>9:00</time><span><strong>Coastal Trail</strong><small>Walk toward Oneloa and Dragon's Teeth.</small></span></button></li>
+          <li data-stop-index="2"><button type="button"><time>10:45</time><span><strong>Dragon's Teeth</strong><small>30–45 minute side walk.</small></span></button></li>
+          <li data-stop-index="3"><button type="button"><time>11:30</time><span><strong>D.T. Fleming</strong><small>Short beach/restroom stop.</small></span></button></li>
+          <li data-stop-index="4"><button type="button"><time>12:00</time><span><strong>Honolua Bay</strong><small>Lookout or short forest walk.</small></span></button></li>
+          <li data-stop-index="5"><button type="button"><time>12:45</time><span><strong>Honolua Store</strong><small>Quick lunch.</small></span></button></li>
+          <li data-stop-index="6"><button type="button"><time>1:45</time><span><strong>Nakalele Blowhole</strong><small>Stay well back on dry rock.</small></span></button></li>
+          <li data-stop-index="7"><button type="button"><time>3:15</time><span><strong>Return to Westin</strong><small>Return 4:30–5:00 PM.</small></span></button></li>
+          <li class="fixed-event"><div><time>6:45</time><span><strong>Sale Pepe</strong><small>2 guests · bar seats · 808-667-7667</small></span></div></li>
+        </ol>
+      </div>
 
-<section id="hikes" class="panel">
-<details open><summary>Kapalua Coastal Trail</summary>
-<p><strong>Parking:</strong> Kapalua Bay public parking.</p><p><strong>Walk:</strong> Kapalua Bay → Oneloa Bay → Dragon's Teeth → D.T. Fleming.</p><p><strong>Distance:</strong> Up to about 3.5 miles round trip. Turn around whenever ready.</p>
-<a class="btn secondary" href="https://maps.apple.com/?ll=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking">Open parking</a></details>
+      <div class="card">
+        <p class="eyebrow">Pack once</p>
+        <h2>Before leaving</h2>
+        <div class="checklist">
+          <label><input type="checkbox"><span>Download West Maui offline map in Apple Maps</span></label>
+          <label><input type="checkbox"><span>Fully charge both phones</span></label>
+          <label><input type="checkbox"><span>Water and snacks</span></label>
+          <label><input type="checkbox"><span>Walking shoes with grip</span></label>
+          <label><input type="checkbox"><span>Swimsuits and towels</span></label>
+          <label><input type="checkbox"><span>Hats and reef-safe sunscreen</span></label>
+          <label><input type="checkbox"><span>Light rain layer</span></label>
+          <label><input type="checkbox"><span>At least half a tank of gas</span></label>
+          <label><input type="checkbox"><span>Keep valuables out of sight</span></label>
+        </div>
+      </div>
+    </section>
 
-<details><summary>Dragon's Teeth / Makaluapuna Point</summary>
-<p><strong>Parking:</strong> Small public area near Office Road.</p><p><strong>Walk:</strong> About 0.4 mile each way. Uneven and exposed near the lava formations.</p><p>Watch for golfers and stay away from wet rocks and cliff edges.</p>
-<a class="btn secondary" href="https://maps.apple.com/?q=Dragon%27s+Teeth+Parking,+Kapalua,+HI">Open parking</a></details>
+    <section id="maps" class="panel" aria-labelledby="maps-heading" hidden>
+      <div class="card">
+        <p class="eyebrow">One tap away</p>
+        <h2 id="maps-heading">Stops & parking</h2>
+        <p>Use individual legs instead of one giant route. It is easier when parking is full or you skip a stop.</p>
+        <div class="place-list">
+          <a href="https://maps.apple.com/?daddr=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking&dirflg=d"><span><b>1</b><strong>Kapalua Bay Parking</strong><small>Public parking · trail start</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=Dragon%27s%20Teeth%20Access%20Trail%2C%20Lower%20Honoapiilani%20Rd%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>2</b><strong>Dragon's Teeth Parking</strong><small>Office Road access</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=D.T.%20Fleming%20Park%2C%20Lower%20Honoapiilani%20Rd%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>3</b><strong>D.T. Fleming Beach</strong><small>Beach park parking</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=Honolua%20Bay%20Lookout%2C%20Honoapiilani%20Hwy%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>4</b><strong>Honolua Bay Lookout</strong><small>Roadside lookout</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=Honolua%20Store%2C%20502%20Office%20Rd%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>5</b><strong>Honolua Store</strong><small>Lunch stop</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=21.024424,-156.590498&q=Nakalele%20Blowhole%20Parking&dirflg=d"><span><b>6</b><strong>Nakalele Parking</strong><small>Mile marker 38.5 pullout</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=The%20Westin%20Ka%27anapali%20Ocean%20Resort%20Villas%2C%206%20Kai%20Ala%20Dr%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>7</b><strong>Return to Westin</strong><small>6 Kai Ala Drive</small></span><em>Directions</em></a>
+          <a href="https://maps.apple.com/?daddr=Sale%20Pepe%2C%20157%20Kupuohi%20St%2C%20Lahaina%2C%20HI%2096761&dirflg=d"><span><b>8</b><strong>Sale Pepe</strong><small>157 Kupuohi Street</small></span><em>Directions</em></a>
+        </div>
+      </div>
+      <figure class="card map-card">
+        <img class="map" src="./route-map.png" alt="Map of the Northwest Maui route from Ka'anapali through Kapalua, Honolua Bay, and Nakalele Blowhole">
+        <figcaption>Northwest Maui route · Turn around at Nakalele</figcaption>
+      </figure>
+    </section>
 
-<details><summary>Honolua Bay</summary>
-<p><strong>Parking:</strong> Roadside only. Pull completely off the highway and obey signs.</p><p><strong>Options:</strong> Quick overlook or short shaded forest walk to the bay.</p>
-<a class="btn secondary" href="https://maps.apple.com/?q=Honolua+Bay+Lookout,+Maui,+HI">Open lookout</a></details>
+    <section id="hikes" class="panel" aria-labelledby="hikes-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Trail notes</p><h2 id="hikes-heading">Hikes & walks</h2></div>
+      <details open><summary>Kapalua Coastal Trail <span>About 3.5 mi max</span></summary><div class="details-body"><p><strong>Parking:</strong> Kapalua Bay public parking.</p><p><strong>Walk:</strong> Kapalua Bay → Oneloa Bay → Dragon's Teeth → D.T. Fleming.</p><p><strong>Distance:</strong> Up to about 3.5 miles round trip. Turn around whenever ready.</p><a class="button secondary" href="https://maps.apple.com/?daddr=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking&dirflg=d">Open parking in Maps</a></div></details>
+      <details><summary>Dragon's Teeth / Makaluapuna Point <span>0.4 mi each way</span></summary><div class="details-body"><p><strong>Parking:</strong> Small public area near Office Road.</p><p><strong>Walk:</strong> About 0.4 mile each way. Uneven and exposed near the lava formations.</p><p>Watch for golfers and stay away from wet rocks and cliff edges.</p><a class="button secondary" href="https://maps.apple.com/?daddr=Dragon%27s%20Teeth%20Access%20Trail%2C%20Lower%20Honoapiilani%20Rd%2C%20Lahaina%2C%20HI%2096761&dirflg=d">Open parking in Maps</a></div></details>
+      <details><summary>Honolua Bay <span>Short forest walk</span></summary><div class="details-body"><p><strong>Parking:</strong> Roadside only. Pull completely off the highway and obey signs.</p><p><strong>Options:</strong> Quick overlook or short shaded forest walk to the bay.</p><a class="button secondary" href="https://maps.apple.com/?daddr=Honolua%20Bay%20Lookout%2C%20Honoapiilani%20Hwy%2C%20Lahaina%2C%20HI%2096761&dirflg=d">Open lookout in Maps</a></div></details>
+      <details><summary>Nakalele Blowhole <span>45–75 min</span></summary><div class="details-body"><p><strong>Parking:</strong> Dirt pullout near mile marker 38.5.</p><p><strong>Walk:</strong> Rough, rocky, exposed; about 45–75 minutes.</p><p class="danger"><strong>Safety:</strong> Stay uphill, on dry rock, and far from the opening. Never turn your back on the ocean.</p><a class="button danger-button" href="https://maps.apple.com/?daddr=21.024424,-156.590498&q=Nakalele%20Blowhole%20Parking&dirflg=d">Open parking in Maps</a></div></details>
+    </section>
 
-<details><summary>Nakalele Blowhole</summary>
-<p><strong>Parking:</strong> Dirt pullout near mile marker 38.5.</p><p><strong>Walk:</strong> Rough, rocky, exposed; about 45–75 minutes.</p><p><strong>Safety:</strong> Stay uphill, on dry rock, and far from the opening. Never turn your back on the ocean.</p>
-<a class="btn warn" href="https://maps.apple.com/?ll=21.024424,-156.590498&q=Nakalele%20Blowhole%20Parking">Open parking</a></details>
-</section>
+    <section id="trip" class="panel" aria-labelledby="trip-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Rest of the trip</p><h2 id="trip-heading">Monday–Wednesday</h2></div>
+      <div class="card day-card"><time>Monday, Aug 3</time><p>Resort day: beach, pool, snorkeling, paddleboard or kayak, optional sunset sail.</p></div>
+      <div class="card day-card"><time>Tuesday, Aug 4</time><p>Resort and flexible activities: spa, fitness, short Kapalua visit, sunset dinner.</p></div>
+      <div class="card day-card"><time>Wednesday, Aug 5</time><p>Check out 10:00 AM, store luggage, use resort facilities, leave around 5:00–5:30 PM, return rental car around 7:30 PM, UA1750 departs OGG at 9:55 PM.</p><a class="button secondary" href="https://maps.apple.com/?daddr=Kahului%20Airport%2C%201%20Keolani%20Pl%2C%20Kahului%2C%20HI%2096732&dirflg=d">Directions to OGG Airport</a></div>
 
-<section id="trip" class="panel">
-<div class="card"><h2>Monday, Aug 3</h2><p>Resort day: beach, pool, snorkeling, paddleboard or kayak, optional sunset sail.</p></div>
-<div class="card"><h2>Tuesday, Aug 4</h2><p>Resort and flexible activities: spa, fitness, short Kapalua visit, sunset dinner.</p></div>
-<div class="card"><h2>Wednesday, Aug 5</h2><p>Check out 10:00 AM, store luggage, use resort facilities, leave around 5:00–5:30 PM, return rental car around 7:30 PM, UA1750 departs OGG at 9:55 PM.</p>
-<a class="btn secondary" href="https://maps.apple.com/?q=Kahului+Airport,+Maui,+HI">Open OGG Airport</a></div>
-<div class="card"><h3>Important contacts</h3><p><strong>Emergency:</strong> 911<br><strong>Maui Police:</strong> 808-244-6400<br><strong>Lahaina Police:</strong> 808-661-4441<br><strong>Westin:</strong> 808-667-3200<br><strong>Sale Pepe:</strong> 808-667-7667</p></div>
-</section>
-</main>
-<footer>Works offline after first load. Apple Maps links open the Maps app.</footer>
-<script src="app.js"></script>
-</body></html>
+      <div class="card contacts">
+        <p class="eyebrow">Keep handy</p><h2>Important contacts</h2>
+        <a class="emergency" href="tel:911"><span><strong>Emergency</strong><small>Police, fire or medical</small></span><b>Call 911</b></a>
+        <a href="tel:+18082446400"><span>Maui Police</span><b>808-244-6400</b></a>
+        <a href="tel:+18086614441"><span>Lahaina Police</span><b>808-661-4441</b></a>
+        <a href="tel:+18086673200"><span>Westin</span><b>808-667-3200</b></a>
+        <a href="tel:+18086677667"><span>Sale Pepe</span><b>808-667-7667</b></a>
+      </div>
+
+      <div class="card install-card" id="install-guide">
+        <p class="eyebrow">Works like an app</p><h2>Add to Home Screen</h2>
+        <p>Install from Safari so the itinerary is one tap away and available offline after your first visit.</p>
+        <ol>
+          <li><span>1</span><p>Open this page in <strong>Safari</strong>.</p></li>
+          <li><span>2</span><p>Tap the <strong>Share</strong> button.</p></li>
+          <li><span>3</span><p>Scroll down and tap <strong>Add to Home Screen</strong>.</p></li>
+          <li><span>4</span><p>Turn on <strong>Open as Web App</strong>, then tap <strong>Add</strong>.</p></li>
+          <li><span>5</span><p>Open it once while online. The status at the top will say <strong>Ready offline</strong>.</p></li>
+        </ol>
+        <p class="notice compact"><strong>Apple Maps is separate:</strong> Download the West Maui offline map in Apple Maps before leaving.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made for Maui · Itinerary available offline after the first successful visit</footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
