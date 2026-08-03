@@ -1,20 +1,16 @@
 {
-  "name": "Maui Trip Aug 2026",
+  "id": "./",
+  "name": "Maui Trip · August 2026",
   "short_name": "Maui Trip",
-  "start_url": "./index.html",
+  "description": "Offline itinerary, parking, hikes, contacts and Apple Maps directions for Maui.",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f1e8",
-  "theme_color": "#0f6d7a",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f1e7",
+  "theme_color": "#075d68",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }
