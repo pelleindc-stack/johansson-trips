@@ -127,6 +127,8 @@ details[open] summary::after { content: "−"; }
 summary span { margin-left: auto; color: var(--muted); font-size: .75rem; font-weight: 650; text-align: right; }
 .details-body { padding: 0 18px 18px; border-top: 1px solid var(--line); }
 .details-body p { margin: 13px 0; }
+.details-body .trail-note { padding: 12px; border-radius: 12px; background: var(--ocean-pale); color: var(--ocean-dark); }
+.details-body .button + .button { margin-top: 10px; }
 .danger { padding: 12px; border-radius: 12px; background: var(--coral-pale); color: #68261e; }
 .danger-button { background: var(--coral); color: white; }
 
