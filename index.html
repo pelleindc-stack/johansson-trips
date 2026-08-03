@@ -45,66 +45,54 @@
 
     <section id="today" class="panel active" aria-labelledby="today-heading">
       <div class="hero card">
-        <span class="badge">Sunday, Aug 2</span>
-        <h2 id="today-heading">Active Northwest Maui Day</h2>
-        <p class="hero-summary">Leave 8:30 AM · Return 4:30–5:00 PM · Sale Pepe 6:45 PM</p>
-        <div class="route" aria-label="Route: Westin to Kapalua to Honolua to Nakalele and back to Westin">
-          <span>Westin</span><i>→</i><span>Kapalua</span><i>→</i><span>Honolua</span><i>→</i><span>Nakalele</span><i>→</i><span>Westin</span>
+        <span class="badge">Completed · Sunday, Aug 2</span>
+        <h2 id="today-heading">Northwest Maui Day Recap</h2>
+        <p class="hero-summary">Coastal trail, beaches, forest and blowhole · Back at the Westin around 2:20 PM</p>
+        <div class="route" aria-label="Completed route: Westin to Kapalua to Honolua to Nakalele, Safeway, and back to Westin">
+          <span>Westin</span><i>→</i><span>Kapalua</span><i>→</i><span>Honolua</span><i>→</i><span>Nakalele</span><i>→</i><span>Safeway</span><i>→</i><span>Westin</span>
         </div>
       </div>
 
-      <article class="next-stop card" aria-labelledby="next-stop-heading">
-        <div class="next-stop-topline">
-          <p class="eyebrow">Next stop <span id="stop-progress">1 of 8</span></p>
-          <button class="text-button" id="reset-route" type="button">Start over</button>
-        </div>
-        <h2 id="next-stop-heading" tabindex="-1">Kapalua Bay Parking</h2>
-        <p class="next-time" id="next-stop-time">Arrive 8:50 AM</p>
-        <p id="next-stop-note">Beach and trail start.</p>
-        <a class="button primary maps-button" id="next-stop-map" href="https://maps.apple.com/?daddr=20.997744,-156.666019&q=Kapalua%20Bay%20Public%20Parking&dirflg=d">Get directions in Apple Maps</a>
-        <div class="stop-controls">
-          <button class="button ghost" id="previous-stop" type="button" disabled>Previous</button>
-          <button class="button secondary" id="complete-stop" type="button">Mark visited →</button>
+      <article class="card workout-card" aria-labelledby="workout-heading">
+        <p class="eyebrow">Actual workout</p>
+        <h2 id="workout-heading">Kapalua Coastal Trail & Dragon’s Teeth</h2>
+        <div class="workout-stats">
+          <div><strong>3.41</strong><span>miles</span></div>
+          <div><strong>758 ft</strong><span>elevation gain</span></div>
+          <div><strong>1:31</strong><span>moving time</span></div>
+          <div><strong>2:22</strong><span>elapsed</span></div>
+          <div><strong>505</strong><span>active calories</span></div>
         </div>
       </article>
 
-      <aside class="notice warning" role="note">
-        <strong>Turn around at Nakalele.</strong>
-        <span>Return the same way. Do not continue around the remote north side.</span>
-      </aside>
-
       <div class="card">
-        <div class="section-heading">
-          <div><p class="eyebrow">At a glance</p><h2>Quick schedule</h2></div>
-          <span class="small">Tap a stop to make it next</span>
-        </div>
-        <ol class="timeline" id="timeline">
-          <li data-stop-index="0"><button type="button"><time>8:50</time><span><strong>Kapalua Bay</strong><small>Beach and trail start.</small></span></button></li>
-          <li data-stop-index="1"><button type="button"><time>9:00</time><span><strong>Coastal Trail</strong><small>Walk toward Oneloa and Dragon's Teeth.</small></span></button></li>
-          <li data-stop-index="2"><button type="button"><time>10:45</time><span><strong>Dragon's Teeth</strong><small>30–45 minute side walk.</small></span></button></li>
-          <li data-stop-index="3"><button type="button"><time>11:30</time><span><strong>D.T. Fleming</strong><small>Short beach/restroom stop.</small></span></button></li>
-          <li data-stop-index="4"><button type="button"><time>12:00</time><span><strong>Honolua Bay</strong><small>Lookout or short forest walk.</small></span></button></li>
-          <li data-stop-index="5"><button type="button"><time>12:45</time><span><strong>Honolua Store</strong><small>Quick lunch.</small></span></button></li>
-          <li data-stop-index="6"><button type="button"><time>1:45</time><span><strong>Nakalele Blowhole</strong><small>Stay well back on dry rock.</small></span></button></li>
-          <li data-stop-index="7"><button type="button"><time>3:15</time><span><strong>Return to Westin</strong><small>Return 4:30–5:00 PM.</small></span></button></li>
-          <li class="fixed-event"><div><time>6:45</time><span><strong>Sale Pepe</strong><small>2 guests · bar seats · 808-667-7667</small></span></div></li>
-        </ol>
+        <p class="eyebrow">Completed</p>
+        <h2>Sunday highlights</h2>
+        <ul class="completed-list">
+          <li><span aria-hidden="true">✓</span><div><strong>Kapalua Coastal Trail</strong><small>Completed with the Dragon’s Teeth walk.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>D.T. Fleming Beach</strong><small>Beach stop completed.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Lunch at Honolua Store</strong><small>A convenient stop between the coast and Honolua Bay.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Honolua Bay forest walk</strong><small>The forest walk was nice; the bay was busy.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Nakalele Blowhole</strong><small>Quick stop completed.</small></div></li>
+          <li><span aria-hidden="true">✓</span><div><strong>Safeway</strong><small>Stopped before returning to the Westin around 2:20 PM.</small></div></li>
+        </ul>
       </div>
 
-      <div class="card">
-        <p class="eyebrow">Pack once</p>
-        <h2>Before leaving</h2>
-        <div class="checklist">
-          <label><input type="checkbox"><span>Download West Maui offline map in Apple Maps</span></label>
-          <label><input type="checkbox"><span>Fully charge both phones</span></label>
-          <label><input type="checkbox"><span>Water and snacks</span></label>
-          <label><input type="checkbox"><span>Walking shoes with grip</span></label>
-          <label><input type="checkbox"><span>Swimsuits and towels</span></label>
-          <label><input type="checkbox"><span>Hats and reef-safe sunscreen</span></label>
-          <label><input type="checkbox"><span>Light rain layer</span></label>
-          <label><input type="checkbox"><span>At least half a tank of gas</span></label>
-          <label><input type="checkbox"><span>Keep valuables out of sight</span></label>
-        </div>
+      <aside class="notice recommendation" role="note">
+        <strong>Honolua Bay recommendation</strong>
+        <span>The forest walk is nice, but the bay was busy and snorkeling is almost a must to make the stop fully worthwhile. Arrive early and bring snorkel gear.</span>
+      </aside>
+
+      <aside class="notice recommendation" role="note">
+        <strong>Nakalele recommendation</strong>
+        <span>Plan on 30–45 minutes unless you want to spend extra time exploring the coastline.</span>
+      </aside>
+
+      <div class="card dinner-card">
+        <p class="eyebrow">Still ahead tonight</p>
+        <h2>Sale Pepe · 6:45 PM</h2>
+        <p>2 guests · bar seats · 808-667-7667</p>
+        <a class="button secondary" href="https://maps.apple.com/?daddr=Sale%20Pepe%2C%20157%20Kupuohi%20St%2C%20Lahaina%2C%20HI%2096761&dirflg=d">Directions to Sale Pepe</a>
       </div>
     </section>
 
@@ -141,7 +129,19 @@
     <section id="trip" class="panel" aria-labelledby="trip-heading" hidden>
       <div class="panel-intro"><p class="eyebrow">Rest of the trip</p><h2 id="trip-heading">Monday–Wednesday</h2></div>
       <div class="card day-card"><time>Monday, Aug 3</time><p>Resort day: beach, pool, snorkeling, paddleboard or kayak, optional sunset sail.</p></div>
-      <div class="card day-card"><time>Tuesday, Aug 4</time><p>Resort and flexible activities: spa, fitness, short Kapalua visit, sunset dinner.</p></div>
+      <div class="card day-card sail-card">
+        <time>Tuesday, Aug 4</time>
+        <h3>Teralani Holo Holo Sunset Cocktail Sail</h3>
+        <p class="event-time">5:00–7:00 PM · 2 adults</p>
+        <p><strong>Arrive by 4:30 PM.</strong> Check in at the Aqualani Beach Activities Kiosk, oceanside of the Outrigger Kaʻanapali Beach Resort, 2525 Kaʻanapali Parkway.</p>
+        <ul class="event-notes">
+          <li>Each guest must sign the waiver.</li>
+          <li>Bring photo ID if drinking alcohol.</li>
+          <li>Beach boarding may mean getting wet up to the thighs.</li>
+          <li>Bring sunglasses, a cover-up, swimsuit and towel as needed, and lotion sunscreen only.</li>
+        </ul>
+        <a class="button secondary" href="https://maps.apple.com/?daddr=Outrigger%20Ka%27anapali%20Beach%20Resort%2C%202525%20Ka%27anapali%20Pkwy%2C%20Lahaina%2C%20HI%2096761&dirflg=d">Directions to Outrigger check-in</a>
+      </div>
       <div class="card day-card"><time>Wednesday, Aug 5</time><p>Check out 10:00 AM, store luggage, use resort facilities, leave around 5:00–5:30 PM, return rental car around 7:30 PM, UA1750 departs OGG at 9:55 PM.</p><a class="button secondary" href="https://maps.apple.com/?daddr=Kahului%20Airport%2C%201%20Keolani%20Pl%2C%20Kahului%2C%20HI%2096732&dirflg=d">Directions to OGG Airport</a></div>
 
       <div class="card contacts">
