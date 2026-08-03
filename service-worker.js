@@ -1,4 +1,4 @@
-const CACHE_NAME = 'maui-trip-v5';
+const CACHE_NAME = 'maui-trip-v6';
 const APP_SHELL = [
   './',
   './index.html',
