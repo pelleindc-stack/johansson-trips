@@ -53,6 +53,22 @@ main { width: min(100%, 760px); margin: 0 auto; padding: 14px 14px calc(104px + 
 .route span { padding: 6px 8px; border-radius: 999px; background: rgba(255,255,255,.8); border: 1px solid #d9e9e6; }
 .route i { color: var(--muted); font-style: normal; }
 
+.workout-card { border-color: #b7d9d5; background: linear-gradient(150deg, #fffefa, #eef8f6); }
+.workout-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 16px; }
+.workout-stats div { min-height: 82px; padding: 13px; border: 1px solid #d5e8e5; border-radius: 15px; background: rgba(255,255,255,.78); }
+.workout-stats strong, .workout-stats span { display: block; }
+.workout-stats strong { color: var(--ocean); font-size: 1.35rem; line-height: 1.1; }
+.workout-stats span { margin-top: 5px; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.workout-stats div:last-child { grid-column: 1 / -1; }
+
+.completed-list { margin: 10px 0 -4px; padding: 0; list-style: none; }
+.completed-list li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 12px 0; border-top: 1px solid var(--line); }
+.completed-list li > span { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: var(--ocean-pale); color: var(--ocean); font-weight: 900; }
+.completed-list strong, .completed-list small { display: block; }
+.completed-list small { margin-top: 2px; color: var(--muted); font-size: .84rem; }
+.recommendation { border-left-color: var(--ocean); background: var(--ocean-pale); color: var(--ocean-dark); }
+.dinner-card { border-color: #ead6a3; background: #fff9e9; }
+
 .next-stop { padding: 20px; border: 2px solid var(--ocean); background: var(--ocean); color: white; box-shadow: 0 13px 30px rgba(7,93,104,.22); }
 .next-stop .eyebrow { color: #a9e1db; }
 .next-stop h2 { margin: 6px 0 2px; font-size: 1.8rem; }
@@ -115,6 +131,11 @@ summary span { margin-left: auto; color: var(--muted); font-size: .75rem; font-w
 .danger-button { background: var(--coral); color: white; }
 
 .day-card time { color: var(--ocean); font-size: 1.1rem; font-weight: 850; }
+.day-card h3 { margin: 8px 0 3px; font-size: 1.25rem; line-height: 1.25; }
+.event-time { color: var(--ocean); font-weight: 850; }
+.event-notes { margin: 14px 0 18px; padding-left: 21px; }
+.event-notes li { margin: 8px 0; }
+.sail-card { border-color: #b7d9d5; background: linear-gradient(150deg, #fffefa, #eef8f6); }
 .contacts > a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 57px; padding: 10px 2px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
 .contacts a b { color: var(--ocean); font-size: .86rem; }
 .contacts small { display: block; color: var(--muted); }
