@@ -30,15 +30,18 @@
   <main id="main">
     <nav class="tabs" aria-label="Trip sections">
       <button class="active" type="button" data-tab="today" aria-controls="today" aria-selected="true">
-        <span aria-hidden="true">☀︎</span><span>Sunday</span>
+        <span aria-hidden="true">☀︎</span><span>Sun</span>
       </button>
-      <button type="button" data-tab="maps" aria-controls="maps" aria-selected="false">
-        <span aria-hidden="true">⌖</span><span>Maps</span>
+      <button type="button" data-tab="monday" aria-controls="monday" aria-selected="false">
+        <span aria-hidden="true">M</span><span>Mon</span>
       </button>
-      <button type="button" data-tab="hikes" aria-controls="hikes" aria-selected="false">
-        <span aria-hidden="true">△</span><span>Hikes</span>
+      <button type="button" data-tab="tuesday" aria-controls="tuesday" aria-selected="false">
+        <span aria-hidden="true">T</span><span>Tue</span>
       </button>
-      <button type="button" data-tab="trip" aria-controls="trip" aria-selected="false">
+      <button type="button" data-tab="wednesday" aria-controls="wednesday" aria-selected="false">
+        <span aria-hidden="true">W</span><span>Wed</span>
+      </button>
+      <button type="button" data-tab="more" aria-controls="more" aria-selected="false">
         <span aria-hidden="true">•••</span><span>Trip</span>
       </button>
     </nav>
@@ -128,8 +131,8 @@
       <details><summary>Nakalele Blowhole <span>45–75 min</span></summary><div class="details-body"><p><strong>Parking:</strong> Dirt pullout near mile marker 38.5.</p><p><strong>Walk:</strong> Rough, rocky, exposed; about 45–75 minutes.</p><p class="danger"><strong>Safety:</strong> Stay uphill, on dry rock, and far from the opening. Never turn your back on the ocean.</p><a class="button danger-button" href="https://maps.apple.com/?daddr=21.024424,-156.590498&q=Nakalele%20Blowhole%20Parking&dirflg=d">Open parking in Maps</a></div></details>
     </section>
 
-    <section id="trip" class="panel" aria-labelledby="trip-heading" hidden>
-      <div class="panel-intro"><p class="eyebrow">Rest of the trip</p><h2 id="trip-heading">Monday–Wednesday</h2></div>
+    <section id="monday" class="panel" aria-labelledby="monday-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Completed · Aug 3</p><h2 id="monday-heading">Monday</h2></div>
       <div class="card day-card">
         <time>Completed · Monday, Aug 3</time>
         <h3>Morning walk & Java Jazz</h3>
@@ -144,6 +147,10 @@
         <p>Morning walk completed from 6:49–8:19 AM. The rest of the day remains flexible for the beach, pool, snorkeling, paddleboard or kayak.</p>
         <a class="button secondary" href="https://maps.apple.com/?daddr=Java%20Jazz%20Maui%2C%203350%20Lower%20Honoapiilani%20Rd%20Unit%20204%2C%20Lahaina%2C%20HI%2096761&dirflg=w">Walking directions to Java Jazz</a>
       </div>
+    </section>
+
+    <section id="tuesday" class="panel" aria-labelledby="tuesday-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Aug 4</p><h2 id="tuesday-heading">Tuesday</h2></div>
       <div class="card day-card sail-card">
         <time>Tuesday, Aug 4</time>
         <h3>Teralani Holo Holo Sunset Cocktail Sail</h3>
@@ -157,7 +164,24 @@
         </ul>
         <a class="button secondary" href="https://maps.apple.com/?daddr=Outrigger%20Ka%27anapali%20Beach%20Resort%2C%202525%20Ka%27anapali%20Pkwy%2C%20Lahaina%2C%20HI%2096761&dirflg=d">Directions to Outrigger check-in</a>
       </div>
-      <div class="card day-card"><time>Wednesday, Aug 5</time><p>Check out 10:00 AM, store luggage, use resort facilities, leave around 5:00–5:30 PM, return rental car around 7:30 PM, UA1750 departs OGG at 9:55 PM.</p><a class="button secondary" href="https://maps.apple.com/?daddr=Kahului%20Airport%2C%201%20Keolani%20Pl%2C%20Kahului%2C%20HI%2096732&dirflg=d">Directions to OGG Airport</a></div>
+    </section>
+
+    <section id="wednesday" class="panel" aria-labelledby="wednesday-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Aug 5</p><h2 id="wednesday-heading">Wednesday</h2></div>
+      <div class="card day-card">
+        <time>Wednesday, Aug 5</time>
+        <h3>Departure day</h3>
+        <p>Check out 10:00 AM, store luggage, use resort facilities, leave around 5:00–5:30 PM, return rental car around 7:30 PM, UA1750 departs OGG at 9:55 PM.</p>
+        <a class="button secondary" href="https://maps.apple.com/?daddr=Kahului%20Airport%2C%201%20Keolani%20Pl%2C%20Kahului%2C%20HI%2096732&dirflg=d">Directions to OGG Airport</a>
+      </div>
+    </section>
+
+    <section id="more" class="panel" aria-labelledby="more-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Trip resources</p><h2 id="more-heading">More</h2></div>
+      <div class="card more-links">
+        <button class="button secondary" type="button" data-open-panel="maps">⌖ Stops, parking & route map</button>
+        <button class="button secondary" type="button" data-open-panel="hikes">△ Hikes & trail notes</button>
+      </div>
 
       <div class="card contacts">
         <p class="eyebrow">Keep handy</p><h2>Important contacts</h2>

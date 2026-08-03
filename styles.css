@@ -36,7 +36,7 @@ main { width: min(100%, 760px); margin: 0 auto; padding: 14px 14px calc(104px + 
 .panel.active { display: block; animation: reveal .22s ease-out; }
 @keyframes reveal { from { opacity: .3; transform: translateY(4px); } }
 
-.tabs { position: fixed; z-index: 30; right: 10px; bottom: calc(8px + env(safe-area-inset-bottom)); left: 10px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; max-width: 560px; min-height: 66px; margin: auto; padding: 6px; border: 1px solid rgba(18,56,61,.1); border-radius: 22px; background: rgba(255,254,250,.94); box-shadow: 0 10px 34px rgba(10,49,53,.22); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+.tabs { position: fixed; z-index: 30; right: 10px; bottom: calc(8px + env(safe-area-inset-bottom)); left: 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; max-width: 560px; min-height: 66px; margin: auto; padding: 6px; border: 1px solid rgba(18,56,61,.1); border-radius: 22px; background: rgba(255,254,250,.94); box-shadow: 0 10px 34px rgba(10,49,53,.22); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 .tabs button { display: grid; place-items: center; gap: 1px; min-width: 0; min-height: 54px; border: 0; border-radius: 16px; background: transparent; color: var(--muted); font: inherit; font-size: .7rem; font-weight: 750; cursor: pointer; }
 .tabs button span:first-child { font-size: 1.25rem; line-height: 1; }
 .tabs button.active { background: var(--ocean); color: white; box-shadow: 0 4px 12px rgba(7,93,104,.22); }
@@ -136,6 +136,7 @@ summary span { margin-left: auto; color: var(--muted); font-size: .75rem; font-w
 .event-notes { margin: 14px 0 18px; padding-left: 21px; }
 .event-notes li { margin: 8px 0; }
 .sail-card { border-color: #b7d9d5; background: linear-gradient(150deg, #fffefa, #eef8f6); }
+.more-links { display: grid; gap: 10px; }
 .contacts > a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 57px; padding: 10px 2px; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
 .contacts a b { color: var(--ocean); font-size: .86rem; }
 .contacts small { display: block; color: var(--muted); }

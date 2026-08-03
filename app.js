@@ -5,7 +5,7 @@ const panels = [...document.querySelectorAll('.panel')];
 function selectTab(id, updateHash = true) {
   if (!document.getElementById(id)) id = 'today';
   tabs.forEach(button => {
-    const selected = button.dataset.tab === id;
+    const selected = button.dataset.tab === id || (button.dataset.tab === 'more' && (id === 'maps' || id === 'hikes'));
     button.classList.toggle('active', selected);
     button.setAttribute('aria-selected', String(selected));
   });
@@ -18,6 +18,7 @@ function selectTab(id, updateHash = true) {
   window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 }
 tabs.forEach(button => button.addEventListener('click', () => selectTab(button.dataset.tab)));
+document.querySelectorAll('[data-open-panel]').forEach(button => button.addEventListener('click', () => selectTab(button.dataset.openPanel)));
 selectTab(location.hash.slice(1) || 'today', false);
 
 const connection = document.getElementById('connection-status');
