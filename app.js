@@ -21,6 +21,57 @@ tabs.forEach(button => button.addEventListener('click', () => selectTab(button.d
 document.querySelectorAll('[data-open-panel]').forEach(button => button.addEventListener('click', () => selectTab(button.dataset.openPanel)));
 selectTab(location.hash.slice(1) || 'today', false);
 
+const photoLinks = [...document.querySelectorAll('.photo-grid a')];
+const viewer = document.getElementById('photo-viewer');
+const viewerImage = document.getElementById('viewer-image');
+const viewerCaption = document.getElementById('viewer-caption');
+const viewerCounter = document.getElementById('viewer-counter');
+const viewerPrevious = document.getElementById('viewer-previous');
+const viewerNext = document.getElementById('viewer-next');
+const viewerClose = document.getElementById('viewer-close');
+let photoIndex = 0;
+let touchStartX = 0;
+
+function renderPhoto() {
+  const link = photoLinks[photoIndex];
+  const thumbnail = link.querySelector('img');
+  viewerImage.src = link.href;
+  viewerImage.alt = thumbnail.alt;
+  viewerCaption.textContent = link.closest('figure').querySelector('figcaption').textContent;
+  viewerCounter.textContent = `${photoIndex + 1} of ${photoLinks.length}`;
+}
+
+function movePhoto(direction) {
+  photoIndex = (photoIndex + direction + photoLinks.length) % photoLinks.length;
+  renderPhoto();
+}
+
+photoLinks.forEach((link, index) => {
+  link.setAttribute('aria-haspopup', 'dialog');
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    photoIndex = index;
+    renderPhoto();
+    viewer.showModal();
+    document.body.classList.add('viewer-open');
+  });
+});
+
+viewerPrevious.addEventListener('click', () => movePhoto(-1));
+viewerNext.addEventListener('click', () => movePhoto(1));
+viewerClose.addEventListener('click', () => viewer.close());
+viewer.addEventListener('close', () => document.body.classList.remove('viewer-open'));
+viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+viewer.addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft') movePhoto(-1);
+  if (event.key === 'ArrowRight') movePhoto(1);
+});
+viewer.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+viewer.addEventListener('touchend', event => {
+  const distance = event.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(distance) > 45) movePhoto(distance > 0 ? -1 : 1);
+}, { passive: true });
+
 const connection = document.getElementById('connection-status');
 const connectionLabel = document.getElementById('connection-label');
 function showConnection(state, label) {
