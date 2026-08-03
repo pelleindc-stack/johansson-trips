@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="stylesheet" href="./styles.css?v=8">
+  <link rel="stylesheet" href="./styles.css?v=9">
   <title>Maui Trip · Aug 2026</title>
 </head>
 <body>
@@ -253,7 +253,24 @@
     </section>
   </main>
 
+  <dialog class="photo-viewer" id="photo-viewer" aria-label="Trip photo viewer">
+    <div class="viewer-shell">
+      <button class="viewer-close" id="viewer-close" type="button" aria-label="Close photo viewer">×</button>
+      <div class="viewer-stage">
+        <img id="viewer-image" src="" alt="">
+      </div>
+      <div class="viewer-meta">
+        <p id="viewer-caption"></p>
+        <span id="viewer-counter" aria-live="polite"></span>
+      </div>
+      <div class="viewer-controls">
+        <button id="viewer-previous" type="button" aria-label="Previous photo">← Previous</button>
+        <button id="viewer-next" type="button" aria-label="Next photo">Next →</button>
+      </div>
+    </div>
+  </dialog>
+
   <footer>Made for Maui · Itinerary available offline after the first successful visit</footer>
-  <script src="./app.js?v=8" defer></script>
+  <script src="./app.js?v=9" defer></script>
 </body>
 </html>
