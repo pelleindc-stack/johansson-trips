@@ -5,7 +5,7 @@ const panels = [...document.querySelectorAll('.panel')];
 function selectTab(id, updateHash = true) {
   if (!document.getElementById(id)) id = 'today';
   tabs.forEach(button => {
-    const selected = button.dataset.tab === id || (button.dataset.tab === 'more' && (id === 'maps' || id === 'hikes'));
+    const selected = button.dataset.tab === id || (button.dataset.tab === 'more' && (id === 'photos' || id === 'maps' || id === 'hikes'));
     button.classList.toggle('active', selected);
     button.setAttribute('aria-selected', String(selected));
   });

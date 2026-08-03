@@ -1,13 +1,24 @@
-const CACHE_NAME = 'maui-trip-v7';
+const CACHE_NAME = 'maui-trip-v8';
 const APP_SHELL = [
   './',
   './index.html',
-  './styles.css',
-  './app.js',
+  './styles.css?v=8',
+  './app.js?v=8',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
-  './route-map.png'
+  './route-map.png',
+  './photos/kapalua-beach.jpg',
+  './photos/oneloa-beach.jpg',
+  './photos/oneloa-beach-selfie.jpg',
+  './photos/dragons-teeth-coast.jpg',
+  './photos/dragons-teeth-formations.jpg',
+  './photos/dragons-teeth-view.jpg',
+  './photos/honolua-bay.jpg',
+  './photos/honolua-forest.jpg',
+  './photos/nakalele-blowhole.jpg',
+  './photos/nakalele-overlook.jpg',
+  './photos/westin-sunset.jpg'
 ];
 
 self.addEventListener('install', event => {
