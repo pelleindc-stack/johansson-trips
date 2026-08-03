@@ -11,7 +11,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=8">
   <title>Maui Trip · Aug 2026</title>
 </head>
 <body>
@@ -176,9 +176,55 @@
       </div>
     </section>
 
+    <section id="photos" class="panel" aria-labelledby="photos-heading" hidden>
+      <div class="panel-intro"><p class="eyebrow">Trip memories</p><h2 id="photos-heading">Photo gallery</h2></div>
+
+      <div class="card gallery-section">
+        <h3>Kapalua & Oneloa Beach</h3>
+        <div class="photo-grid">
+          <figure><a href="./photos/kapalua-beach.jpg"><img src="./photos/kapalua-beach.jpg" loading="lazy" decoding="async" alt="Kapalua Beach with blue water and Molokaʻi in the distance"></a><figcaption>Kapalua Beach</figcaption></figure>
+          <figure><a href="./photos/oneloa-beach.jpg"><img src="./photos/oneloa-beach.jpg" loading="lazy" decoding="async" alt="Nearly empty sandy shoreline at windy Oneloa Beach"></a><figcaption>Oneloa Beach</figcaption></figure>
+          <figure><a href="./photos/oneloa-beach-selfie.jpg"><img src="./photos/oneloa-beach-selfie.jpg" loading="lazy" decoding="async" alt="Renee and Pelle smiling at Oneloa Beach"></a><figcaption>Oneloa Beach stop</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="card gallery-section">
+        <h3>Dragon’s Teeth</h3>
+        <div class="photo-grid">
+          <figure><a href="./photos/dragons-teeth-coast.jpg"><img src="./photos/dragons-teeth-coast.jpg" loading="lazy" decoding="async" alt="Rocky coastline near Dragon’s Teeth"></a><figcaption>Makaluapuna Point</figcaption></figure>
+          <figure><a href="./photos/dragons-teeth-formations.jpg"><img src="./photos/dragons-teeth-formations.jpg" loading="lazy" decoding="async" alt="Dragon’s Teeth lava formations beside the ocean"></a><figcaption>Lava formations</figcaption></figure>
+          <figure><a href="./photos/dragons-teeth-view.jpg"><img src="./photos/dragons-teeth-view.jpg" loading="lazy" decoding="async" alt="Dragon’s Teeth formations looking toward the green Maui coast"></a><figcaption>Coastal view</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="card gallery-section">
+        <h3>Honolua Bay</h3>
+        <div class="photo-grid">
+          <figure><a href="./photos/honolua-bay.jpg"><img src="./photos/honolua-bay.jpg" loading="lazy" decoding="async" alt="Snorkelers and sailboats in Honolua Bay"></a><figcaption>Honolua Bay</figcaption></figure>
+          <figure><a href="./photos/honolua-forest.jpg"><img src="./photos/honolua-forest.jpg" loading="lazy" decoding="async" alt="Renee beneath hanging roots on the Honolua Bay forest walk"></a><figcaption>Forest walk</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="card gallery-section">
+        <h3>Nakalele Blowhole</h3>
+        <div class="photo-grid">
+          <figure><a href="./photos/nakalele-blowhole.jpg"><img src="./photos/nakalele-blowhole.jpg" loading="lazy" decoding="async" alt="Nakalele Blowhole spraying above the rocky coast"></a><figcaption>The blowhole</figcaption></figure>
+          <figure><a href="./photos/nakalele-overlook.jpg"><img src="./photos/nakalele-overlook.jpg" loading="lazy" decoding="async" alt="Renee and Pelle at the overlook above Nakalele Blowhole"></a><figcaption>Nakalele overlook</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="card gallery-section">
+        <h3>Westin Ocean Villas</h3>
+        <div class="photo-grid single">
+          <figure><a href="./photos/westin-sunset.jpg"><img src="./photos/westin-sunset.jpg" loading="lazy" decoding="async" alt="Golden sunset framed by palm trees at Westin Ocean Villas"></a><figcaption>Sunset at the Westin</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
     <section id="more" class="panel" aria-labelledby="more-heading" hidden>
       <div class="panel-intro"><p class="eyebrow">Trip resources</p><h2 id="more-heading">More</h2></div>
       <div class="card more-links">
+        <button class="button secondary" type="button" data-open-panel="photos">▣ Trip photo gallery</button>
         <button class="button secondary" type="button" data-open-panel="maps">⌖ Stops, parking & route map</button>
         <button class="button secondary" type="button" data-open-panel="hikes">△ Hikes & trail notes</button>
       </div>
@@ -208,6 +254,6 @@
   </main>
 
   <footer>Made for Maui · Itinerary available offline after the first successful visit</footer>
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=8" defer></script>
 </body>
 </html>
