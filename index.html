@@ -11,23 +11,23 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="./icon-192.png">
-  <link rel="stylesheet" href="./styles.css?v=9">
+  <link rel="stylesheet" href="./styles.css?v=10">
   <title>Maui Trip · Aug 2026</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to itinerary</a>
-  <header class="app-header">
-    <div>
-      <p class="eyebrow">Aug 1–5, 2026</p>
-      <h1>Maui Trip</h1>
-    </div>
-    <div class="connection" id="connection-status" role="status" aria-live="polite">
-      <span class="connection-dot" aria-hidden="true"></span>
-      <span id="connection-label">Checking…</span>
-    </div>
-  </header>
+  <div class="top-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Aug 1–5, 2026</p>
+        <h1>Maui Trip</h1>
+      </div>
+      <div class="connection" id="connection-status" role="status" aria-live="polite">
+        <span class="connection-dot" aria-hidden="true"></span>
+        <span id="connection-label">Checking…</span>
+      </div>
+    </header>
 
-  <main id="main">
     <nav class="tabs" aria-label="Trip sections">
       <button class="active" type="button" data-tab="today" aria-controls="today" aria-selected="true">
         <span aria-hidden="true">☀︎</span><span>Sun</span>
@@ -45,7 +45,9 @@
         <span aria-hidden="true">•••</span><span>Trip</span>
       </button>
     </nav>
+  </div>
 
+  <main id="main">
     <section id="today" class="panel active" aria-labelledby="today-heading">
       <div class="hero card">
         <span class="badge">Completed · Sunday, Aug 2</span>
@@ -271,6 +273,6 @@
   </dialog>
 
   <footer>Made for Maui · Itinerary available offline after the first successful visit</footer>
-  <script src="./app.js?v=9" defer></script>
+  <script src="./app.js?v=10" defer></script>
 </body>
 </html>
