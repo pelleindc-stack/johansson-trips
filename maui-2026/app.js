@@ -89,6 +89,10 @@ updateNetworkStatus();
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
+      // Remove the legacy repository-wide worker left by the single-trip site.
+      const legacyScope = new URL('../', document.baseURI).href;
+      const legacyRegistration = await navigator.serviceWorker.getRegistration(legacyScope);
+      if (legacyRegistration && legacyRegistration.scope === legacyScope) await legacyRegistration.unregister();
       const registration = await navigator.serviceWorker.register(`${APP_BASE}service-worker.js`, { scope: APP_BASE });
       await navigator.serviceWorker.ready;
       showConnection('ready', navigator.onLine ? 'Ready offline' : 'Offline · ready');
