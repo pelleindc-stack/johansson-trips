@@ -14,12 +14,18 @@ h1 { margin:5px 0 8px; font-size:clamp(2.3rem,11vw,4rem); line-height:.98; lette
 .trip-card.maui::after { background:#9bd9cf; }
 .trip-card.yellowstone { background:linear-gradient(145deg,#fffdf7,#f3efe1); }
 .trip-card.yellowstone::after { background:#dccb96; }
+.trip-card.portugal { background:linear-gradient(145deg,#fffefa,#edf4f0); }
+.trip-card.portugal::after { background:#acd8ce; }
+.trip-card.spain { background:linear-gradient(145deg,#fffaf5,#f7e8da); }
+.trip-card.spain::after { background:#e7b889; }
 .status { display:inline-flex; position:relative; z-index:1; margin:0 0 18px; padding:5px 10px; border-radius:999px; font-size:.76rem; font-weight:850; }
 .complete { background:#dff1ee; color:#075d68; }.upcoming { background:#f7ecc8; color:#72520c; }
 .trip-card h2 { position:relative; z-index:1; margin:5px 0 8px; font-size:1.65rem; letter-spacing:-.03em; }
 .trip-card > p:not(.status):not(.card-kicker) { position:relative; z-index:1; max-width:390px; margin:0; color:var(--muted); }
 .trip-card a { display:flex; position:relative; z-index:1; align-items:center; justify-content:space-between; gap:8px; width:max-content; min-width:210px; margin-top:24px; padding:13px 16px; border-radius:14px; background:var(--ocean); color:white; font-weight:800; text-decoration:none; box-shadow:0 6px 14px rgba(7,93,104,.2); }
 .trip-card.yellowstone a { background:#77512a; }
+.trip-card.portugal a { background:#286657; }
+.trip-card.spain a { background:#a95035; }
 .trip-card a:focus-visible { outline:3px solid #ffbd4a; outline-offset:3px; }
 footer { padding:0 16px max(24px,env(safe-area-inset-bottom)); color:var(--muted); font-size:.78rem; text-align:center; }
 @media (min-width:600px) { .trip-list { grid-template-columns:1fr 1fr; }.trip-card { min-height:310px; } }
