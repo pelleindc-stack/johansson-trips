@@ -1,6 +1,6 @@
-const CACHE_NAME = 'yellowstone-trip-v1';
+const CACHE_NAME = 'yellowstone-trip-v2';
 const APP_SHELL = [
-  './', './index.html', './styles.css', './app.js', './manifest.webmanifest',
+  './', './index.html', './styles.css', './app.js', './auth.js', './manifest.webmanifest',
   './icon-192.png', './icon-512.png', './route-map.png'
 ];
 

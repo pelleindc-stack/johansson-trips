@@ -1,9 +1,10 @@
-const CACHE_NAME = 'maui-trip-v11';
+const CACHE_NAME = 'maui-trip-v12';
 const APP_SHELL = [
   './',
   './index.html',
   './styles.css?v=11',
   './app.js?v=11',
+  './auth.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
