@@ -14,3 +14,12 @@ details { overflow:hidden; box-shadow:none; }summary { display:flex; align-items
 .photo-card { margin:15px 0 0; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:#f7faf6; }
 .photo-card img { display:block; width:100%; height:auto; max-height:460px; object-fit:cover; }
 .photo-card figcaption { padding:8px 10px; color:var(--muted); font-size:.74rem; text-align:center; }
+.itinerary-card { background:linear-gradient(145deg,#fffefa,#f4f8ef); }
+.trip-timeline { margin:10px 0 0; padding:0; list-style:none; }
+.trip-timeline li { display:grid; grid-template-columns:9.4rem 1fr; gap:8px; padding:11px 0; border-top:1px solid var(--line); }
+.trip-timeline strong { color:var(--pine); font-size:.82rem; }
+.trip-timeline span { color:var(--muted); font-size:.88rem; }
+.reference-details { margin-top:14px; border:1px solid var(--line); border-radius:16px; background:#f8fbf7; }
+.reference-details summary { min-height:48px; padding:10px 13px; font-size:.82rem; }
+.reference-details .photo-card { margin:0 12px 12px; }
+@media (max-width:390px) { .trip-timeline li { grid-template-columns:1fr; gap:2px; } }
