@@ -10,3 +10,4 @@ details { overflow:hidden; box-shadow:none; }summary { display:flex; align-items
 .photo-card { margin:15px 0 0; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:#f7faf6; }
 .photo-card img { display:block; width:100%; height:auto; max-height:460px; object-fit:cover; }
 .photo-card figcaption { padding:8px 10px; color:var(--muted); font-size:.74rem; text-align:center; }
+.review-note { margin:13px 0 0!important; padding:11px 13px; border-left:4px solid #b4843d; border-radius:12px; background:#fff7e5; color:#624b20; font-size:.88rem; }
