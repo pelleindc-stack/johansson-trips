@@ -1,7 +1,7 @@
-const CACHE_NAME = 'yellowstone-trip-v3';
+const CACHE_NAME = 'yellowstone-trip-v4';
 const APP_SHELL = [
   './', './index.html', './guide.html', './styles.css', './app.js', './auth.js', './manifest.webmanifest',
-  './icon-192.png', './icon-512.png', './route-map.png', './photos/mammoth-terraces-nps.jpg', './photos/grand-canyon-nps.jpg'
+  './icon-192.png', './icon-512.png', './route-map.png', './photos/mammoth-terraces-nps.jpg', './photos/grand-canyon-nps.jpg', './photos/ac-hotel-bozeman.png'
 ];
 
 self.addEventListener('install', event => {
