@@ -1,4 +1,4 @@
-const CACHE_NAME = 'spain-trip-v16';
+const CACHE_NAME = 'spain-trip-v17';
 const APP_SHELL = ['./', './index.html', './styles.css', './app.js', './auth.js', './manifest.webmanifest', './icon-192.png', './icon-512.png', './route-map.png', './photos/united-confirmation.jpg', './photos/scheduled-1.jpg', './photos/scheduled-2.jpg', './photos/olivia-chloe-return.png', './photos/royal-palm-22.png', './photos/ronda-puente-nuevo.jpg', './photos/ronda-alameda.jpg', './photos/caminito/arc_268221_g.jpg', './photos/caminito/arc_269178_g.jpg', './photos/caminito/arc_257296_g.jpg', './photos/caminito/arc_209331_g.jpg', './photos/caminito/arc_257383_g.jpg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('spain-trip-') && key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim())));
