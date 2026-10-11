@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./styles.css">
   <script src="./auth.js"></script>
   <title>Charlotte · Erin Kelly’s Wedding</title>
-  <style>:root { --ocean:#65517f; }.tabs { grid-template-columns:repeat(3,minmax(0,1fr)); }.app-header { background:#65517f; }</style>
+  <style>:root { --ocean:#65517f; }.tabs { grid-template-columns:repeat(4,minmax(0,1fr)); }.app-header { background:#65517f; }</style>
 </head>
 <body>
   <div class="top-shell">
@@ -25,6 +25,7 @@
       <button class="active" type="button" data-tab="monday" aria-selected="true"><span>Wedding</span><small>Trip plan</small></button>
       <button type="button" data-tab="tuesday" aria-selected="false"><span>Flights</span><small>United · via Houston</small></button>
       <button type="button" data-tab="trip" aria-selected="false"><span>Bookings</span><small>Miles &amp; details</small></button>
+      <button type="button" data-tab="map" aria-selected="false"><span>Map</span><small>Hotel &amp; airport</small></button>
     </nav>
   </div>
   <main id="main">
@@ -43,6 +44,11 @@
       <article class="card"><p class="eyebrow">MileagePlus award bookings</p><h2>Booked with miles · can be changed</h2><p>These flights can be changed, as noted by Per. Any change may require a different mileage amount or additional charges; review the revised booking with United.</p><dl class="key-values"><div><dt>Outbound · PW8TZQ</dt><dd>25,400 miles + $11.20 total for two</dd></div><div><dt>Return · PWSX6S</dt><dd>67,200 miles + $11.20 total for two</dd></div><div><dt>Trip total · two travelers</dt><dd>92,600 miles + $22.40 USD</dd></div><div><dt>Booked</dt><dd>October 11, 2026</dd></div><div><dt>Travelers</dt><dd>Per Anders Johansson &amp; Renee Johansson</dd></div></dl><a class="button" href="https://www.united.com/en/us/manageres">Manage United bookings</a></article>
       <article class="card"><p class="eyebrow">Baggage · receipt allowance</p><h2>Checked bags</h2><p>The receipts list the first and second checked bags at $0 each, up to 70 lb / 32 kg and 62 linear inches / 157 cm per bag. The waiver depends on valid Premier 1K status at check-in with United or United Express.</p></article>
       <article class="card"><p class="eyebrow">Still to arrange</p><h2>Wedding &amp; transportation</h2><p>Add the wedding schedule and venue, arrange ground transportation, and confirm the hotel guest count and late arrival.</p></article>
+    </section>
+    <section class="panel" id="map" hidden>
+      <article class="card"><p class="eyebrow">Charlotte map</p><h2>Hotel &amp; airport</h2><label for="map-place">Show on map</label><select id="map-place" class="button"><option value="AC Hotel Charlotte City Center, 220 East Trade Street, Charlotte NC">AC Hotel Charlotte City Center</option><option value="Charlotte Douglas International Airport CLT">Charlotte Douglas Airport (CLT)</option></select><iframe id="place-map" title="Map of AC Hotel Charlotte City Center" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=AC%20Hotel%20Charlotte%20City%20Center%2C%20220%20East%20Trade%20Street%2C%20Charlotte%20NC&amp;output=embed" style="display:block;width:100%;height:360px;border:0;border-radius:15px;margin-top:15px" allowfullscreen></iframe><p class="notice compact">The interactive map needs an internet connection. Saved hotel details are available offline.</p></article>
+      <article class="card"><p class="eyebrow">Driving directions</p><h2>Airport ↔ hotel</h2><p>AC Hotel Charlotte City Center · 220 East Trade Street, Charlotte, NC 28202</p><a class="button" href="https://maps.apple.com/?saddr=Charlotte%20Douglas%20International%20Airport&amp;daddr=AC%20Hotel%20Charlotte%20City%20Center%2C%20220%20East%20Trade%20Street%2C%20Charlotte%20NC&amp;dirflg=d">Airport → hotel · Apple Maps</a><a class="button" href="https://maps.apple.com/?saddr=AC%20Hotel%20Charlotte%20City%20Center%2C%20220%20East%20Trade%20Street%2C%20Charlotte%20NC&amp;daddr=Charlotte%20Douglas%20International%20Airport&amp;dirflg=d">Hotel → airport · Apple Maps</a><a class="button secondary" href="https://www.google.com/maps/dir/?api=1&amp;origin=Charlotte%20Douglas%20International%20Airport&amp;destination=AC%20Hotel%20Charlotte%20City%20Center%2C%20220%20East%20Trade%20Street%2C%20Charlotte%20NC&amp;travelmode=driving">Airport → hotel · Google Maps</a></article>
+      <article class="card"><h2>Wedding venue</h2><p>The wedding venue will be added to the map once its address is available.</p></article>
     </section>
   </main>
   <footer>Per &amp; Renee · Charlotte 2027 · Erin Kelly’s wedding</footer>

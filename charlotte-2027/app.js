@@ -32,3 +32,10 @@ if ('serviceWorker' in navigator) addEventListener('load', async () => {
     registration.update().catch(() => {});
   } catch { updateConnection('', navigator.onLine ? 'Online only' : 'Offline unavailable'); }
 });
+
+const mapPlace = document.getElementById('map-place');
+const placeMap = document.getElementById('place-map');
+mapPlace.addEventListener('change', () => {
+  placeMap.src = `https://maps.google.com/maps?q=${encodeURIComponent(mapPlace.value)}&output=embed`;
+  placeMap.title = `Map of ${mapPlace.options[mapPlace.selectedIndex].text}`;
+});
