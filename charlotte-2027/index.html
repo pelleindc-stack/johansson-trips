@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#65517f">
+  <meta name="description" content="Charlotte trip for Erin Kelly’s wedding, May 12–17, 2027.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Charlotte 2027">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./auth.js"></script>
+  <title>Charlotte · Erin Kelly’s Wedding</title>
+  <style>:root { --ocean:#65517f; }.tabs { grid-template-columns:repeat(3,minmax(0,1fr)); }.app-header { background:#65517f; }</style>
+</head>
+<body>
+  <div class="top-shell">
+    <header class="app-header">
+      <div><p class="eyebrow">Per &amp; Renee · May 12–17, 2027</p><h1>Charlotte</h1><a class="all-trips-link" href="../">← All Trips</a></div>
+      <div class="connection" id="connection-status" role="status"><span class="connection-dot"></span><span id="connection-label">Checking…</span></div>
+    </header>
+    <nav class="tabs" aria-label="Charlotte trip sections">
+      <button class="active" type="button" data-tab="monday" aria-selected="true"><span>Wedding</span><small>Trip plan</small></button>
+      <button type="button" data-tab="tuesday" aria-selected="false"><span>Flights</span><small>United · via Houston</small></button>
+      <button type="button" data-tab="trip" aria-selected="false"><span>Bookings</span><small>Miles &amp; details</small></button>
+    </nav>
+  </div>
+  <main id="main">
+    <section class="panel active" id="monday">
+      <div class="hero card"><p class="badge">Flights booked · miles · changeable</p><h2>Erin Kelly’s wedding</h2><p>Per &amp; Renee travel to Charlotte, North Carolina, May 12–17, 2027. Flights are booked with MileagePlus miles and can be changed.</p><div class="route"><span>SNA</span><i>→</i><span>IAH</span><i>→</i><span>CLT</span></div></div>
+      <article class="card"><p class="eyebrow">Wedding plans</p><h2>Details to come</h2><dl class="key-values"><div><dt>Wedding date &amp; time</dt><dd>Pending</dd></div><div><dt>Venue</dt><dd>Pending</dd></div><div><dt>Hotel / room block</dt><dd>Pending</dd></div><div><dt>Ground transportation</dt><dd>Pending</dd></div></dl></article>
+      <article class="card"><p class="eyebrow">Travel overview</p><h2>Five nights in Charlotte</h2><dl class="key-values"><div><dt>Arrival</dt><dd>Wed May 12 · 9:52 PM at CLT</dd></div><div><dt>Departure</dt><dd>Mon May 17 · 4:45 PM from CLT</dd></div><div><dt>Home arrival</dt><dd>Mon May 17 · 9:53 PM at SNA</dd></div></dl><p class="notice compact">All flight times are local to each airport. Travel dates are booked; the wedding date has not yet been added.</p></article>
+    </section>
+    <section class="panel" id="tuesday" hidden>
+      <article class="card"><p class="eyebrow">Outbound · Wednesday, May 12, 2027</p><h2>Orange County → Charlotte</h2><p>United Economy (XN) · confirmation <strong>PW8TZQ</strong></p><div class="flight"><strong>UA2086 · SNA → IAH</strong><span>12:10 PM PDT → 5:25 PM CDT</span><small>Orange County → Houston · 3h 15m</small></div><p class="notice compact">Houston connection · 1h 00m</p><div class="flight"><strong>UA2864 · IAH → CLT</strong><span>6:25 PM CDT → 9:52 PM EDT</span><small>Houston → Charlotte · 2h 27m</small></div><dl class="key-values"><div><dt>Seats · both flights</dt><dd>Per 7A · Renee 7C</dd></div><div><dt>Total travel time</dt><dd>6h 42m</dd></div></dl></article>
+      <article class="card"><p class="eyebrow">Return · Monday, May 17, 2027</p><h2>Charlotte → Orange County</h2><p>United Economy (YN) · confirmation <strong>PWSX6S</strong></p><div class="flight"><strong>UA2407 · CLT → IAH</strong><span>4:45 PM EDT → 6:40 PM CDT</span><small>Charlotte → Houston · 2h 55m</small></div><p class="notice compact">Houston connection · 1h 39m</p><div class="flight"><strong>UA326 · IAH → SNA</strong><span>8:19 PM CDT → 9:53 PM PDT</span><small>Houston → Orange County · 3h 34m</small></div><dl class="key-values"><div><dt>Seats · both flights</dt><dd>Per 7A · Renee 7C</dd></div><div><dt>Total travel time</dt><dd>8h 08m</dd></div></dl></article>
+      <p class="notice">Schedule and seats are from the receipts issued October 11, 2026. Check United for updates before travel.</p>
+    </section>
+    <section class="panel" id="trip" hidden>
+      <article class="card"><p class="eyebrow">MileagePlus award bookings</p><h2>Booked with miles · can be changed</h2><p>These flights can be changed, as noted by Per. Any change may require a different mileage amount or additional charges; review the revised booking with United.</p><dl class="key-values"><div><dt>Outbound · PW8TZQ</dt><dd>25,400 miles + $11.20 total for two</dd></div><div><dt>Return · PWSX6S</dt><dd>67,200 miles + $11.20 total for two</dd></div><div><dt>Trip total · two travelers</dt><dd>92,600 miles + $22.40 USD</dd></div><div><dt>Booked</dt><dd>October 11, 2026</dd></div><div><dt>Travelers</dt><dd>Per Anders Johansson &amp; Renee Johansson</dd></div></dl><a class="button" href="https://www.united.com/en/us/manageres">Manage United bookings</a></article>
+      <article class="card"><p class="eyebrow">Baggage · receipt allowance</p><h2>Checked bags</h2><p>The receipts list the first and second checked bags at $0 each, up to 70 lb / 32 kg and 62 linear inches / 157 cm per bag. The waiver depends on valid Premier 1K status at check-in with United or United Express.</p></article>
+      <article class="card"><p class="eyebrow">Still to arrange</p><h2>Wedding &amp; stay</h2><p>Add the wedding schedule and venue, choose lodging, and arrange transportation once those details are available.</p></article>
+    </section>
+  </main>
+  <footer>Per &amp; Renee · Charlotte 2027 · Erin Kelly’s wedding</footer>
+  <script src="./app.js"></script>
+</body>
+</html>

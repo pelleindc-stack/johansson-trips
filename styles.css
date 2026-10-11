@@ -18,6 +18,9 @@ h1 { margin:5px 0 8px; font-size:clamp(2.3rem,11vw,4rem); line-height:.98; lette
 .trip-card.portugal::after { background:#acd8ce; }
 .trip-card.spain { background:linear-gradient(145deg,#fffaf5,#f7e8da); }
 .trip-card.spain::after { background:#e7b889; }
+.trip-card.charlotte { background:linear-gradient(145deg,#fffefa,#eee9f5); }
+.trip-card.charlotte::after { background:#c9b5de; }
+.trip-card.charlotte a { background:#65517f; }
 .status { display:inline-flex; position:relative; z-index:1; margin:0 0 18px; padding:5px 10px; border-radius:999px; font-size:.76rem; font-weight:850; }
 .complete { background:#dff1ee; color:#075d68; }.upcoming { background:#f7ecc8; color:#72520c; }
 .trip-card h2 { position:relative; z-index:1; margin:5px 0 8px; font-size:1.65rem; letter-spacing:-.03em; }
